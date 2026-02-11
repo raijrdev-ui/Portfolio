@@ -6,10 +6,10 @@ A modern, high-end professional portfolio built with a premium dark theme (Black
 
 ## 🛠️ Tech Stack
 
-- **Backend:** Java (8/11/17/21), Spring Boot 3, Spring Data JPA, Hibernate, Maven.
+
 - **Frontend:** JavaScript (ES6+), HTML5, CSS3, Bootstrap 5, jQuery.
 - **Database:** PostgreSQL, MySQL, H2.
-- **DevOps & Tools:** Git, GitHub, Docker, VS Code, IntelliJ IDEA.
+- **DevOps & Tools:** Git, GitHub,  VS Code.
 - **CRM:** Salesforce (Apex & Admin - In progress).
 
 ## ✨ Key Features
