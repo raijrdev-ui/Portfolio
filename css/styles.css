@@ -652,6 +652,7 @@ body {
     padding: 2rem 0;
 }
 
+
 /* ==================== ANIMATIONS ==================== */
 @keyframes fadeInUp {
     from {
@@ -662,6 +663,39 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+/* Estilização do Botão de Download */
+.resume-cta {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-resume {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 35px;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #adadad; /* Cor indigo usada no seu JS */
+    border-radius: 50px; /* Estilo pílula moderno */
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
+}
+
+.btn-resume:hover {
+    background: #909094;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(206, 206, 209, 0.5);
+}
+
+.btn-resume i {
+    font-size: 1.2rem;
 }
 
 @keyframes float {

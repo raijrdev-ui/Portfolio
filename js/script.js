@@ -111,106 +111,7 @@ function showAlert(message, type) {
     }, 4000);
 }
 
-// ==================== DOWNLOAD RESUME ==================== //
-function downloadResume() {
-    // Create a simple resume PDF or document
-    // For now, we'll create a text file that users can download
-    const resumeContent = `
-MY PROFESSIONAL RESUME
 
-===============================================================================
-CONTACT INFORMATION
-===============================================================================
-Email: your.email@example.com
-Phone: +55 (11) 99999-9999
-LinkedIn: linkedin.com/in/yourprofile
-GitHub: github.com/yourprofile
-
-===============================================================================
-PROFESSIONAL SUMMARY
-===============================================================================
-Experienced and passionate developer with strong skills in frontend and backend
-development. Committed to creating high-quality solutions and continuous improvement.
-
-===============================================================================
-TECHNICAL SKILLS
-===============================================================================
-Languages: JavaScript, HTML, CSS, Python, Java, SQL
-Frontend: React, Vue.js, HTML5, CSS3, Responsive Design
-Backend: Node.js, Express.js, REST APIs
-Databases: MongoDB, MySQL, PostgreSQL
-Tools: Git, GitHub, VS Code, Webpack, Docker
-Platforms: AWS, Linux
-
-===============================================================================
-PROFESSIONAL EXPERIENCE
-===============================================================================
-
-SENIOR DEVELOPER
-Tech Company Inc. | 2023 - Present
-• Led development of modern web applications using React and Node.js
-• Mentored junior developers and implemented best practices
-• Improved application performance by 35%
-
-FULL STACK DEVELOPER
-Digital Solutions Ltd. | 2021 - 2023
-• Developed and maintained multiple web applications
-• Improved application performance by 40% through optimization
-• Collaborated with cross-functional teams
-
-JUNIOR DEVELOPER
-Startup Hub | 2020 - 2021
-• Built responsive websites with HTML, CSS, and JavaScript
-• Collaborated with UX team on user interface improvements
-• Contributed to various projects from conception through deployment
-
-===============================================================================
-EDUCATION
-===============================================================================
-
-Bachelor of Science in Computer Science
-University of Technology | 2019 - 2020
-• Focused on web development and software engineering
-• Graduated with honors
-
-===============================================================================
-CERTIFICATIONS & ACHIEVEMENTS
-===============================================================================
-• Web Development Certification
-• React.js Advanced Course
-• Cloud Computing Fundamentals
-• Recognition for Outstanding Performance (2023)
-
-===============================================================================
-LANGUAGES
-===============================================================================
-Portuguese: Native
-English: Fluent
-Spanish: Intermediate
-
-===============================================================================
-ADDITIONAL INFORMATION
-===============================================================================
-• Available for remote work and relocation
-• Open to full-time, part-time, and freelance opportunities
-• Continuous learner with passion for new technologies
-
-Generated on: ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-    `;
-
-    // Create a blob and download
-    const blob = new Blob([resumeContent], { type: 'text/plain' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'My-Resume.txt';
-    document.body.appendChild(a);
-    a.click();
-    window.URL.revokeObjectURL(url);
-    document.body.removeChild(a);
-
-    showAlert('Resume downloaded successfully!', 'success');
-}
 
 // ==================== ANIMATIONS ON SCROLL ==================== //
 const observerOptions = {
@@ -227,8 +128,8 @@ const observer = new IntersectionObserver(function (entries) {
     });
 }, observerOptions);
 
-// Observe skill cards and resume items
-document.querySelectorAll('.skill-card, .resume-item, .tech-category, .contact-item').forEach(el => {
+// Observe skill cards, the new resume button, and other items
+document.querySelectorAll('.skill-card, .btn-resume, .tech-category, .contact-item').forEach(el => {
     el.style.opacity = '0';
     observer.observe(el);
 });
