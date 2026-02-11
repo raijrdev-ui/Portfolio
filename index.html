@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Professional Developer</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">My Portfolio</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#technologies" class="nav-link">Technologies</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-profile">
+                <div class="profile-image-container">
+                    <img src="images/foto_para_git.png" alt="Profile Picture" class="profile-image">
+                    <div class="profile-glow"></div>
+                </div>
+            </div>
+            <h1 class="hero-title">Hi, I'm a Developer</h1>
+            <p class="hero-subtitle">Building beautiful and functional web experiences</p>
+            <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Let's Work Together</button>
+        </div>
+        <div class="hero-shapes">
+            <div class="shape shape1"></div>
+            <div class="shape shape2"></div>
+            <div class="shape shape3"></div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills & Abilities</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Backend / Server-side</h3>
+                    <ul>
+                        <li>Java 8/11/17/21 • Spring Boot 3 • Spring Data JPA • Hibernate</li>
+                        <li>APIs RESTful design and integration</li>
+                        <li>Build tools: Maven</li>
+                        <li>In progress: Salesforce (Apex & Admin)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Frontend / Client-side</h3>
+                    <ul>
+                        <li>JavaScript (ES6+) — DOM, Fetch API, async handling</li>
+                        <li>HTML5 & CSS3 — semantic markup and modern layouts</li>
+                        <li>Bootstrap 5 — responsive components, modals, cards</li>
+                        <li>jQuery — legacy support and quick DOM helpers</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Databases & Tools</h3>
+                    <ul>
+                        <li>PostgreSQL, MySQL, H2</li>
+                        <li>Version control: Git & GitHub</li>
+                        <li>IDEs: IntelliJ IDEA, VS Code</li>
+                        <li>Processes: Scrum, Kanban • OOP best practices</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Leadership & Mentoring — led teams and operations</li>
+                        <li>Assertive Communication — technical docs and stakeholder reporting</li>
+                        <li>Analytical Problem Solving — KPI-driven diagnostics</li>
+                        <li>Adaptability & Strategic Planning</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Highlighted Projects</h3>
+                    <ul>
+                        <li><strong>Gerenciador de Acervo</strong> — Fullstack app (Java + JS). REST API, H2/Postgres persistence, Bootstrap frontend with dynamic reviews and SweetAlert2 feedback.</li>
+                        <li><strong>VIP English Manager</strong> — Java application for pedagogical control using OOP and SQL persistence.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="technologies">
+        <div class="container">
+            <h2 class="section-title">Technologies & Tools</h2>
+            <div class="tech-cloud" aria-label="Technologies and tools">
+                <span class="tech-badge">Java 8/11/17/21</span>
+                <span class="tech-badge">Spring Boot 3</span>
+                <span class="tech-badge">Spring Data JPA</span>
+                <span class="tech-badge">Hibernate</span>
+                <span class="tech-badge">Maven</span>
+                <span class="tech-badge">APIs RESTful</span>
+                <span class="tech-badge">JavaScript (ES6+)</span>
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">Bootstrap 5</span>
+                <span class="tech-badge">jQuery</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">MySQL</span>
+                <span class="tech-badge">H2 Database</span>
+                <span class="tech-badge">Git & GitHub</span>
+                <span class="tech-badge">IntelliJ IDEA</span>
+                <span class="tech-badge">VS Code</span>
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">AWS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume">
+        <div class="container">
+            <h2 class="section-title">My Resume</h2>
+            <div class="resume-content">
+                <div class="resume-summary">
+                    <h3 class="resume-heading">Professional Summary</h3>
+                    <p>Fullstack Developer in career transition, focused on the Java ecosystem (Spring Boot) and modern Frontend technologies. Solid experience building RESTful APIs, data persistence, and creating dynamic, responsive interfaces. Professional with corporate maturity, high problem-solving ability, and fluency in English and Hungarian. Proficient in international technical documentation and high-performance environments.</p>
+                </div>
+
+                <div class="resume-section">
+                    <h3 class="resume-heading">Experience</h3>
+                    <div class="resume-item">
+                        <div class="resume-header">
+                            <h4>Fullstack Developer (Freelancer / Independent)</h4>
+                            <span class="resume-date">2023 – Present</span>
+                        </div>
+                        <p class="resume-company">Self-employed</p>
+                        <p class="resume-description">Focus on developing scalable web solutions and studying software architecture. Project versioning and collaboration via GitHub.</p>
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-header">
+                            <h4>Unit Management & Process Optimization</h4>
+                            <span class="resume-date">2012 – 2022</span>
+                        </div>
+                        <p class="resume-company">Wizard by Pearson</p>
+                        <p class="resume-description">Strategic leadership of units and management of KPIs. Direct interface with international franchisor in English. Conflict resolution and operational flow optimization.</p>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h3 class="resume-heading">Education</h3>
+                    <div class="resume-item">
+                        <div class="resume-header">
+                            <h4>Systems Analysis and Development (In Progress)</h4>
+                            <span class="resume-date">Estácio</span>
+                        </div>
+                        <p class="resume-company"></p>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h3 class="resume-heading">Languages</h3>
+                    <ul class="resume-languages">
+                        <li><strong>Portuguese (Native)</strong></li>
+                        <li><strong>English (Fluent)</strong></li>
+                        <li><strong>Hungarian (Advanced/Fluent)</strong></li>
+                    </ul>
+                </div>
+
+                <div class="resume-download">
+                    <p style="margin-bottom: 1rem; color: var(--text-light); font-size: 0.9rem;">📄 Full CV in PDF available upon request</p>
+                    <button class="download-btn" onclick="downloadResume()">Download Resume as Text</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h4><img src="icons/email.svg" alt="Email" class="contact-icon"> Email</h4>
+                        <p><a href="mailto:rai.jrdev@gmail.com">rai.jrdev@gmail.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h4><img src="icons/phone.svg" alt="Phone" class="contact-icon"> Phone</h4>
+                        <p><a href="tel:+5561996018714">+55 (61) 996018714</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h4><img src="icons/linkedin.svg" alt="LinkedIn" class="contact-icon"> LinkedIn</h4>
+                        <p><a href="https://www.linkedin.com/in/raimundo-cavalcante-de-souza-junior-ti/" target="_blank">linkedin.com/in/raimundo-cavalcante</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h4><img src="icons/github.svg" alt="GitHub" class="contact-icon"> GitHub</h4>
+                        <p><a href="https://github.com/raijrdev-ui" target="_blank">github.com/raijrdev-ui</a></p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 My Portfolio. All rights reserved. Made with ❤️ by Me</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
