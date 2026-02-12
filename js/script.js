@@ -1,6 +1,6 @@
 // ==================== MOBILE MENU ==================== //
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+const hamburger = document.querySelector ('.hamburger');
+const navMenu = document.querySelector ('.nav-menu');
 
 hamburger.addEventListener('click', () => {
     navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
@@ -10,22 +10,29 @@ hamburger.addEventListener('click', () => {
 // Close menu when a link is clicked
 const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', () => { 
+        if (window.innerWidth < 768) { //verify mobile changed 12/02/2026
         navMenu.style.display = 'none';
         hamburger.classList.remove('active');
+        }
     });
 });
 
-// ==================== SMOOTH SCROLLING ==================== //
+// ==================== SMOOTH SCROLLING (CORRIGIDO) ==================== //
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+        const targetId = this.getAttribute('href');
+        
+        // Só executa o preventDefault se o href for apenas "#" ou um ID válido
+        if (targetId.startsWith('#')) {
+            e.preventDefault();
+            const target = document.querySelector(targetId);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         }
     });
 });
@@ -157,7 +164,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// ==================== KEYBOARD SHORTCUTS ==================== //
+// ==================== KEYBOARD SHORTCUTS ===================
 document.addEventListener('keydown', (e) => {
     // Press '/' to focus contact form
     if (e.key === '/' && e.ctrlKey) {

@@ -20,3 +20,10 @@ A modern, high-end professional portfolio built with a premium dark theme (Black
 - **Performance Optimized:** Clean JavaScript without heavy external libraries (like jsPDF), relying on native browser capabilities.
 - **Smooth Animations:** Intersection Observer API used for fade-in effects on scroll.
 
+
+
+## 🔧 Recent Updates & Bug Fixes
+- **Navigation Logic:** Fixed a critical bug where the desktop menu would disappear after interaction by implementing conditional window-width checks.
+- **Smooth Scroll Optimization:** Refined the JavaScript selection logic to ensure `mailto:`, `tel:`, and external links function correctly without being intercepted by the scroll animation script.
+- **SEO & Meta Tags:** Enhanced document metadata for better indexing and professional social media previews.
+
