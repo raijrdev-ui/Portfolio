@@ -50,44 +50,50 @@ window.addEventListener('scroll', () => {
 // ==================== FORM SUBMISSION ==================== //
 const contactForm = document.getElementById('contactForm');
 
-contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
+if (contactForm) {
+    contactForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
 
-    // Get form data
-    const formData = new FormData(this);
-    const name = this.querySelector('input[type="text"]').value;
-    const email = this.querySelector('input[type="email"]').value;
-    const message = this.querySelector('textarea').value;
+        // 1. Validation Logic (Keeping your logic)
+        const name = this.querySelector('input[name="name"]').value;
+        const email = this.querySelector('input[name="email"]').value;
+        const message = this.querySelector('textarea[name="message"]').value;
 
-    // Simple validation
-    if (!name.trim() || !email.trim() || !message.trim()) {
-        showAlert('Please fill in all fields', 'error');
-        return;
-    }
+        if (!name.trim() || !email.trim() || !message.trim()) {
+            alert('Please fill in all fields'); // Or use your showAlert function
+            return;
+        }
 
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        showAlert('Please enter a valid email', 'error');
-        return;
-    }
+        // 2. Visual Feedback
+        const button = this.querySelector('.submit-btn');
+        const originalText = button.innerText;
+        button.innerText = "Sending...";
+        button.disabled = true;
 
-    // Here you would normally send the form data to a server
-    // For now, we'll just show a success message
-    showAlert('Message sent successfully! I will get back to you soon.', 'success');
+        // 3. The Actual Send (Using Fetch to Formspree)
+        try {
+            const formData = new FormData(this);
+            const response = await fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
 
-    // Reset form
-    this.reset();
-
-    // In a real application, you would send this data to a backend
-    console.log('Form Data:', {
-        name: name,
-        email: email,
-        message: message,
-        timestamp: new Date().toISOString()
+            if (response.ok) {
+                alert('Message sent successfully! I will get back to you soon.');
+                this.reset();
+            } else {
+                alert('Oops! There was a problem sending your message.');
+            }
+        } catch (error) {
+            alert('Error connecting to the server. Please try again later.');
+        } finally {
+            // 4. Reset Button State
+            button.innerText = originalText;
+            button.disabled = false;
+        }
     });
-});
-
+}
 // ==================== ALERT FUNCTION ==================== //
 function showAlert(message, type) {
     // Create alert element
