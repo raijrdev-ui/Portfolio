@@ -248,3 +248,24 @@ document.addEventListener('keydown', (e) => {
         toggleDarkMode();
     }
 });
+// ==================== SCROLL TO TOP BUTTON ==================== //
+const scrollToTopBtn = document.createElement('button');
+scrollToTopBtn.innerHTML = '↑';
+scrollToTopBtn.className = 'scroll-to-top';
+document.body.appendChild(scrollToTopBtn);
+
+window.addEventListener('scroll', () => {
+    // Show button when user scrolls down 400px
+    if (window.scrollY > 400) {
+        scrollToTopBtn.style.display = 'block';
+    } else {
+        scrollToTopBtn.style.display = 'none';
+    }
+});
+
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
