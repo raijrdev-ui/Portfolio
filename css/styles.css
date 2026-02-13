@@ -847,3 +847,81 @@ body {
         height: 100px;
     }
 }
+/* added now 
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-categories {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .resume-date {
+        align-self: flex-start;
+    }
+}
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%;      
+        right: 0;        /* Cola na borda direita */
+        width: 180px;    /* Largura reduzida para ficar mais discreto no canto */
+        background: rgba(15, 15, 15, 0.98);
+        padding: 1.5rem 0; /* Tiramos o padding lateral para o texto encostar mais */
+        gap: 1rem;
+        border-bottom-left-radius: 10px; 
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: -5px 5px 15px rgba(0,0,0,0.5);
+        z-index: 1000;
+        margin: 0;       /* Garante que não haja margem externa */
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        text-align: right; /* Alinha o texto à direita */
+        padding: 10px 20px; /* Dá um espaço apenas para o texto não tocar o vidro da tela */
+        width: 100%;
+        display: block;
+    }
+}

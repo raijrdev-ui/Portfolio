@@ -1,23 +1,23 @@
 // ==================== MOBILE MENU ==================== //
-const hamburger = document.querySelector ('.hamburger');
-const navMenu = document.querySelector ('.nav-menu');
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
 
+// Alterna o menu
 hamburger.addEventListener('click', () => {
-    navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
     hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
 });
 
-// Close menu when a link is clicked
+// Fecha o menu ao clicar em um link (apenas no mobile)
 const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(link => {
-    link.addEventListener('click', () => { 
-        if (window.innerWidth < 768) { //verify mobile changed 12/02/2026
-        navMenu.style.display = 'none';
-        hamburger.classList.remove('active');
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
         }
     });
 });
-
 // ==================== SMOOTH SCROLLING (CORRIGIDO) ==================== //
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
